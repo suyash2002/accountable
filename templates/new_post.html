@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+{%block content%}
+<style>
+    form{
+        padding:20px;
+    }
+    .center{
+        margin:auto;
+        width: 60%;
+    
+    padding: 10px
+    }
+    label{
+        display:flex;
+    }
+    input,textarea{
+        padding:10px;
+        border:none;
+        border-radius:10px;
+    }
+   
+</style>
+<div class="center">
+<h2 style="padding:10px">Trust us with your complaint and we won't dissapoint you!</h2>
+
+<div class="drop-box center">
+   <form action="" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form.as_p}}
+   <center><input class="drop-box" style="background-color: white;border: 0px; font-weight: bold;"type="submit"value="Register Complaint"></center>
+</form>
+
+</div>
+</div>
+{%endblock content%}

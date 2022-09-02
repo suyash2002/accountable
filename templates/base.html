@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/styles.css'%}">
+    <link rel="shortcut icon" href="{%static 'images/rel-icon.png'%}" type="image/x-icon">
+    <title>Accountable</title>
+</head>
+<body class="sc3 light-color"  style="background-color: #FFF7EB;">
+    <!-- NAVBAR -->
+    {%if user.is_authenticated%}
+    <nav class="flex light-color">
+    <a class="headings light-color"style="padding-left:80px;color:black">accountable</a>
+    <div class="flex light-color">
+    <div class="drop-box light-color"><a href="{%url 'new'%}"class="link">Report</a></div>
+    <div class="drop-box"><a href="{%url 'post'%}"class="link">Posts</a></div>
+    <div class="drop-box light-color"><a href="{%url 'account_logout'%}"class="link">Logout</a></div>
+    </div>
+    </nav>
+    {%else%}
+    <nav class="flex light-color">
+        <h1 class="headings light-color"style="padding-left:80px">accountable</h1>
+        <div class="flex light-color">
+        <div class="drop-box light-color"><a href="{%url 'account_login'%}"class="link">Login</a></div>
+        <div class="drop-box"><a href="{%url 'account_signup'%}"class="link">Signup</a></div>
+
+        </div>
+    </nav>
+    {%endif%}
+    {%block content%}
+    {%endblock content%}
+</body>
+<footer>
+    <center>
+    <div class="footer"style="background-color:#FFC671">
+        <img class="footer-png"src="{%static 'images/footer.png'%}" alt="footer illustration" height="150px">
+        <h1 class="headings footer-txt">accounting mistakes, accounting progress</h1>
+        <a class="link footer-txt"href="mailto:suyashbarwal@gmail.com" style="color:white">suyashbarwal@gmail.com</a>
+    </div>
+</center>
+</footer>
+
+</html>

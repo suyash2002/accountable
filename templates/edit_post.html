@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block content%}
+<style>
+    form{
+        padding:20px;
+    }
+    .center{
+        margin:auto;
+        width: 60%;
+    
+    padding: 10px
+    }
+    label{
+        display:flex;
+    }
+    input,textarea{
+        padding:10px;
+        border:none;
+        border-radius:10px;
+    }
+   
+</style>
+<div class="center"><center><h3>You are now editing your issue!</h3></center>
+<form action=""method="post" class="center drop-box">
+    {%csrf_token%}
+    {{form.as_p}}
+  <center> <input type="submit"value="Edit"class="drop-box "style="background-color: white;border: 0px; font-weight: bold;"></center> 
+</form>
+</div>
+{%endblock content%}

@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block content%}
+<center>
+<h2>{{object.title}} by {{object.user}}</h2>
+<p style="width:70%">{{object.body}}</p>
+<div>
+{%if object.image%}
+<img src="{{object.image.url}}"width="500" alt="">
+
+{%endif%}
+</div>
+<span ><a class="drop-box " style="color:white"href="{%url 'delete' object.pk%}">Delete</a></span>
+<span><a  class="drop-box " style="color:white"href="{%url 'edit' object.pk%}">Edit</a></span>
+</center>
+{%endblock content%}

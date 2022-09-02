@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block content%}
+<center>
+
+ 
+   {%for pos in object_list%}
+   <!-- <div class="grid grid-cols-2 gap-4"> -->
+<div class="drop-box" style="width: 500px">
+<h2 class="popbold">{{pos.title}}</h2>
+<hr>
+<div>{{pos.body}}</div>
+<a style="color:white"href="{%url 'detail' pos.pk%}">Read more</a>
+</div>
+   
+<!-- </div> -->
+ 
+
+   <!-- <span>{{pos.upvotes}}⬆️{{" "}}{{pos.downvotes}}⬇️</span> -->
+   {%endfor%}
+
+
+    
+
+
+</center>
+{%endblock content%}
