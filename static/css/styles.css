@@ -29,8 +29,8 @@ font-size:25px;
 
 .flex{
     display:flex;
-    justify-content: space-between;
-    justify-items: space-between;
+    justify-content: space-around;
+    justify-items: space-around;
     align-items:center;
 }
 .drop-box{
